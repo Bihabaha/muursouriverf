@@ -1,0 +1,37 @@
+.painting-wall-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: #f5f1e8; /* wall base color */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paint-overlay {
+  position: absolute;
+  top: 0;
+  left: -100%; /* start outside left */
+  width: 100%;
+  
+  height: 100%;
+  background: linear-gradient(120deg, #f47c20 30%, #1f3c88 70%);
+  animation: paintWall 8s forwards; /* animation duration */
+  z-index: 1;
+}
+
+@keyframes paintWall {
+  0% { left: -100%; }
+  100% { left: 0%; }
+  
+}
+
+.content-overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+}
+
+

@@ -1,0 +1,102 @@
+.fancy-footer {
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  padding: 4rem 2rem 2rem;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, #f47c20, #1f3c88, #f5f1e8, #f47c20);
+  background-size: 600% 600%;
+  z-index: 0;
+  animation: gradientMove 20s ease infinite;
+  filter: blur(80px);
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.footer-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #f47c20, #1f3c88, #f5f1e8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowText 3s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+  0% { text-shadow: 0 0 10px #f47c20, 0 0 20px #1f3c88; }
+  50% { text-shadow: 0 0 20px #f5f1e8, 0 0 30px #f47c20; }
+  100% { text-shadow: 0 0 10px #1f3c88, 0 0 20px #f5f1e8; }
+}
+
+.footer-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #ddd;
+}
+
+.footer-links,
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links a,
+.social-icons a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  position: relative;
+}
+
+.footer-links a::after,
+.social-icons a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background: #f47c20;
+  transition: 0.3s;
+}
+
+.footer-links a:hover::after,
+.social-icons a:hover::after {
+  width: 100%;
+}
+
+.footer-links a:hover,
+.social-icons a:hover {
+  color: #f47c20;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 2rem;
+}

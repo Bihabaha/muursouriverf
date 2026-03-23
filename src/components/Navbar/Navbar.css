@@ -1,0 +1,53 @@
+/* === Dutch Navbar Override === */
+
+.navbar {
+  background-color: #FCF9EA !important; /* Warm cream */
+ padding: 0x;
+}
+
+
+
+
+
+.navbar-brand:hover {
+  color: #f47c20 !important; /* Dutch orange */
+}
+.navbar-dutch .nav-link.active {
+  color: #1f3c88;
+  border-bottom: 2px solid #f47c20;
+}
+
+.navbar-nav .nav-link {
+  color: #2c2c2c !important; /* Charcoal */
+
+  font-family: 'Pacifico', cursive;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #f5f1e8;
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+
+ 
+
+}
+.navbar-nav .nav-link:focus {
+  color: #1f3c88;
+  border-bottom: 2px solid #f47c20;
+
+  outline: none; /* remove default focus outline */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f47c20 !important; /* Orange hover */
+}
+
+/* Toggler icon color (for mobile) */
+.navbar-toggler {
+  border-color: #1f3c88;
+}
+
+.navbar-toggler-icon {
+  filter: invert(19%) sepia(53%) saturate(1230%) hue-rotate(196deg)
+    brightness(88%) contrast(95%);
+}
